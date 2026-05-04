@@ -1,0 +1,334 @@
+:root {
+  --isiagu-deep: #1a0f0a;
+  --isiagu-brown: #3d2817;
+  --isiagu-gold: #d4af37;
+  --isiagu-cream: #f5f1e8;
+  --isiagu-red: #8b0000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--isiagu-deep);
+  font-family: 'Manrope', sans-serif;
+  color: var(--isiagu-cream);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  overflow-x: hidden;
+}
+
+/* ISIAGU PATTERN BACKGROUND */
+.isiagu-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-color: var(--isiagu-deep);
+  background-image: 
+    radial-gradient(circle at 25% 25%, var(--isiagu-brown) 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, var(--isiagu-brown) 1px, transparent 1px),
+    url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4af37' fill-opacity='0.06'%3E%3Cpath d='M40 0L45 10L55 10L47 17L50 27L40 21L30 27L33 17L25 10L35 10Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 40px 40px, 40px 40px, 80px 80px;
+  opacity: 0.7;
+}
+
+.iv-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 650px;
+  background: linear-gradient(135deg, var(--isiagu-brown) 0%, #2a1b0f 100%);
+  padding: 3px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.8);
+}
+
+.kola-border {
+  position: absolute;
+  inset: 12px;
+  border: 1.5px solid var(--isiagu-gold);
+  pointer-events: none;
+}
+
+.kola-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--isiagu-gold);
+  border-radius: 50%;
+}
+.kola-dot.tl { top: -5px; left: -5px; }
+.kola-dot.tr { top: -5px; right: -5px; }
+.kola-dot.bl { bottom: -5px; left: -5px; }
+.kola-dot.br { bottom: -5px; right: -5px; }
+
+.iv-content {
+  background: var(--isiagu-deep);
+  padding: 2.5rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* OMU PALM FROND MOTIF */
+.omu-motif {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 120px;
+  height: 120px;
+  background: 
+    linear-gradient(135deg, transparent 45%, var(--isiagu-gold) 45%, var(--isiagu-gold) 55%, transparent 55%),
+    linear-gradient(45deg, transparent 45%, var(--isiagu-gold) 45%, var(--isiagu-gold) 55%, transparent 55%);
+  background-size: 20px 20px;
+  opacity: 0.15;
+  transform: rotate(15deg);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tagline {
+  font-family: 'Marcellus', serif;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  color: var(--isiagu-gold);
+  text-transform: uppercase;
+}
+
+.header h3 {
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  font-weight: 600;
+  color: var(--isiagu-cream);
+  margin-top: 0.3rem;
+}
+
+.couple-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.portrait {
+  position: relative;
+  text-align: center;
+}
+
+.portrait img {
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 2px solid var(--isiagu-gold);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+}
+
+.name-tag {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+  color: var(--isiagu-gold);
+  font-weight: 600;
+}
+
+.center-motif {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 0.5rem;
+}
+
+.kola-nut {
+  width: 70px;
+  height: 70px;
+  border: 2px solid var(--isiagu-gold);
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, var(--isiagu-brown), var(--isiagu-deep));
+}
+
+.kola-inner {
+  transform: rotate(-45deg);
+  font-family: 'Marcellus', serif;
+  font-size: 1.5rem;
+  color: var(--isiagu-gold);
+  font-weight: 600;
+}
+
+.drum-line {
+  width: 2px;
+  height: 15px;
+  background: var(--isiagu-gold);
+}
+
+.and {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.8rem;
+  color: var(--isiagu-gold);
+  line-height: 1;
+}
+
+.couple-names {
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.2rem;
+  font-weight: 400;
+  color: var(--isiagu-gold);
+  line-height: 1.1;
+  margin: 1.5rem 0;
+}
+
+.amp {
+  font-family: 'Marcellus', serif;
+  font-size: 2rem;
+  padding: 0 0.5rem;
+  opacity: 0.7;
+}
+
+.invite-text {
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  line-height: 1.8;
+  margin: 1.5rem 0 2rem;
+  font-weight: 500;
+}
+
+.translation {
+  display: block;
+  font-size: 0.6rem;
+  opacity: 0.7;
+  letter-spacing: 1.5px;
+  margin-top: 0.3rem;
+  font-weight: 300;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.detail-box {
+  text-align: center;
+  padding: 1rem 0.5rem;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  background: rgba(61, 40, 23, 0.4);
+}
+
+.detail-label {
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+  color: var(--isiagu-gold);
+  margin-bottom: 0.3rem;
+}
+
+.detail-main {
+  font-family: 'Marcellus', serif;
+  font-size: 1.1rem;
+  color: var(--isiagu-cream);
+  font-weight: 600;
+}
+
+.detail-sub {
+  font-size: 0.65rem;
+  opacity: 0.8;
+  margin-top: 0.2rem;
+}
+
+.venue-box {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+  margin: 2rem 0;
+}
+
+.venue-label {
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  color: var(--isiagu-gold);
+  margin-bottom: 0.8rem;
+}
+
+.venue-box p {
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  line-height: 1.7;
+}
+
+.footer-note {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.7rem;
+  color: var(--isiagu-gold);
+  font-style: italic;
+}
+
+.translation-sm {
+  font-size: 0.6rem;
+  opacity: 0.7;
+  margin-top: 0.3rem;
+  font-style: normal;
+}
+
+/* MOBILE: 320px - 480px */
+@media (max-width: 480px) {
+  .iv-content {
+    padding: 2rem 1rem;
+  }
+  
+  .couple-section {
+    gap: 0.5rem;
+  }
+  
+  .portrait img {
+    width: 75px;
+    height: 75px;
+  }
+  
+  .kola-nut {
+    width: 55px;
+    height: 55px;
+  }
+  
+  .kola-inner {
+    font-size: 1.2rem;
+  }
+  
+  .couple-names {
+    font-size: 2.5rem;
+  }
+  
+  .details-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+}
+
+/* TABLET: 481px - 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+  .portrait img {
+    width: 110px;
+    height: 110px;
+  }
+  
+  .couple-names {
+    font-size: 3.5rem;
+  }
+}
